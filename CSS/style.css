@@ -1,17 +1,22 @@
-/* Global Styles /
+/* Global Styles */
 body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-}
-div.logo {
-width: 23px;
-padding: 1;
-height: 50px;
-background-color: rgb(153, 153, 253);
-}
-/ Header Styles */
-header {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  }
+  
+  div.logo {
+  width: 23px;
+  padding: 1px;
+  height: 50px;
+  background-color: rgb(153, 153, 253);
+  }
+  
+  /* Header Styles */
+  header {
   background-color: #f5f5f5;
   display: flex;
   align-items: center;
@@ -86,7 +91,7 @@ header {
   margin: 0;
   }
   
-  /* class inline-block*/
+  /* class inline-block */
   .inline-block {
   display: inline-block;
   vertical-align: top;
@@ -98,13 +103,79 @@ header {
   }
   
   /* Flex Items */
+  
   .flexContainer > div {
-  width: 33%;
-  margin: 20px;
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  flex: 1;
+  }
+  /* Work section styles */
+section {
   padding: 20px;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.project img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.project h4 {
+  margin-bottom: 10px;
+}
+
+.project button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+section h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+  
+  /* Work Section */
+  .projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   }
   
-  /* Make the items flexible */
-  .flexContainer > div {
-  flex: 1;
+  .project {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+  .projects-container {
+  width: 66%;
+  margin: 0 auto;
+  }
+  
+  .project {
+  width: calc(33.33% - 20px);
+  }
   }
